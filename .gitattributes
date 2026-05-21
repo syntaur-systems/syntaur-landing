@@ -1,0 +1,2 @@
+# Page generator is a build tool, not the product
+src/template.py linguist-detectable=false
