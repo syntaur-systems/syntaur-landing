@@ -449,16 +449,17 @@ HTML = f"""<!doctype html>
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 40px;
   }}
-  footer .col h4 {{
+  footer .col h2 {{
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.72);  /* WCAG AA on dark bg */
     margin: 0 0 14px;
     font-weight: 600;
   }}
   footer .brand {{ display: flex; align-items: flex-start; gap: 16px; }}
   footer .brand img {{ width: 48px; height: 48px; }}
+  footer .brand img, .module img, .memory-card img, .partners-card img {{ loading: lazy; }}  /* CSS hint; HTML attr is authoritative */
   footer .brand .wordmark {{ font-size: 20px; font-weight: 600; color: #ffffff; letter-spacing: 0.4px; }}
   footer .brand .sub {{ font-size: 14px; color: rgba(255, 255, 255, 0.55); margin-top: 4px; max-width: 280px; line-height: 1.5; }}
   footer .col ul {{ list-style: none; margin: 0; padding: 0; }}
@@ -470,9 +471,18 @@ HTML = f"""<!doctype html>
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 48px;
     padding-top: 24px;
-    font-size: 12.5px;
-    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.72);  /* WCAG AA contrast on dark bg */
     text-align: center;
+  }}
+  footer .legal a {{
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.45);
+    text-underline-offset: 3px;
+  }}
+  footer .legal a:hover {{
+    text-decoration-color: rgba(255, 255, 255, 0.85);
   }}
 
   /* ----- REVIEW NOTES BANNER (only in preview file) ----- */
@@ -538,8 +548,9 @@ HTML = f"""<!doctype html>
   </div>
 </nav>
 
+<main>
 <section class="hero">
-  <img class="logo" src="data:image/png;base64,{LOGO_B64}" alt="Syntaur">
+  <img class="logo" src="data:image/png;base64,{LOGO_B64}" width="132" height="132" alt="Syntaur">
   <h1>One home for everything <span class="accent">personal&nbsp;AI</span> should be.</h1>
   <div class="tagline">Personal AI platform — built so your daily services finally live under one roof.</div>
   <div class="pitch">
@@ -556,7 +567,7 @@ HTML = f"""<!doctype html>
         <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
         <span class="device-url">syntaur — Smart Home</span>
       </div>
-      <img src="./dashboard-preview.png" alt="Syntaur Smart Home dashboard — scenes, climate ring, room cards, security and energy panels" class="device-screen">
+      <img src="./dashboard-preview.webp" alt="Syntaur Smart Home dashboard — scenes, climate ring, room cards, security and energy panels" class="device-screen" width="1280" height="800" loading="lazy" decoding="async">
     </div>
     <div class="preview-caption">Smart Home module · design locked, in active development</div>
   </div>
@@ -675,6 +686,8 @@ HTML = f"""<!doctype html>
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="footer-inner">
     <div class="col">
@@ -687,7 +700,7 @@ HTML = f"""<!doctype html>
       </div>
     </div>
     <div class="col">
-      <h4>Contact</h4>
+      <h2>Contact</h2>
       <ul>
         <li><a href="mailto:hello@syntaur.app">hello@syntaur.app</a></li>
         <li><a href="mailto:partnerships@syntaur.app">partnerships@syntaur.app</a></li>
@@ -695,19 +708,23 @@ HTML = f"""<!doctype html>
       </ul>
     </div>
     <div class="col">
-      <h4>Engineering</h4>
+      <h2>Engineering</h2>
       <ul>
         <li><a href="https://github.com/syntaur-systems" target="_blank" rel="noopener">github.com/syntaur-systems</a></li>
         <li><a href="https://github.com/syntaur-systems/syntaur-landing" target="_blank" rel="noopener">This site is open source</a></li>
       </ul>
     </div>
     <div class="col">
-      <h4>Syntaur Systems</h4>
+      <h2>Syntaur Systems</h2>
       <p>Olympia, Washington</p>
       <p>United States</p>
     </div>
   </div>
-  <div class="legal">© 2026 Syntaur Systems. All rights reserved.</div>
+  <div class="legal">
+    © 2026 Syntaur Systems. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="/privacy">Privacy</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="/terms">Terms</a>
+  </div>
 </footer>
 
 </body>
