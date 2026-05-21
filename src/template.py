@@ -352,8 +352,8 @@ HTML = f"""<!doctype html>
     max-width: 1080px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 48px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
   }}
   footer .col h4 {{
     font-size: 12px;
@@ -582,6 +582,13 @@ HTML = f"""<!doctype html>
         <li><a href="mailto:hello@syntaur.app">hello@syntaur.app</a></li>
         <li><a href="mailto:partnerships@syntaur.app">partnerships@syntaur.app</a></li>
         <li><a href="mailto:support@syntaur.app">support@syntaur.app</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Engineering</h4>
+      <ul>
+        <li><a href="https://github.com/syntaur-systems" target="_blank" rel="noopener">github.com/syntaur-systems</a></li>
+        <li><a href="https://github.com/syntaur-systems/syntaur-landing" target="_blank" rel="noopener">This site is open source</a></li>
       </ul>
     </div>
     <div class="col">
