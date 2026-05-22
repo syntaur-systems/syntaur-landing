@@ -535,7 +535,7 @@ HTML = f"""<!doctype html>
 <nav class="nav">
   <div class="nav-inner">
     <a href="#" class="nav-brand">
-      <img src="data:image/png;base64,{LOGO_B64}" alt="">
+      <img src="data:image/png;base64,{LOGO_B64}" width="32" height="32" alt="">
       <span>Syntaur</span>
     </a>
     <div class="nav-links">
@@ -692,7 +692,7 @@ HTML = f"""<!doctype html>
   <div class="footer-inner">
     <div class="col">
       <div class="brand">
-        <img src="data:image/png;base64,{LOGO_B64}" alt="">
+        <img src="data:image/png;base64,{LOGO_B64}" width="48" height="48" alt="">
         <div>
           <div class="wordmark">Syntaur</div>
           <div class="sub">Personal AI platform built so your daily services finally live under one roof.</div>
