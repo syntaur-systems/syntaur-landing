@@ -1,0 +1,55 @@
+# Syntaur
+
+> Personal AI platform — one binary that consolidates smart home, finances, scheduling, voice, and communications into a single consistent interface. Local-first, pure Rust, no vendor cloud lock-in.
+
+Syntaur is built so a person's daily services finally live under one roof. Most people stitch their digital life together across a dozen apps and accounts; Syntaur replaces that fragmentation with one identity, one memory layer, one interface, running on hardware the user controls.
+
+## Operating principles
+
+- **Local-first.** The home runs on the user's gateway, not Syntaur's cloud.
+- **Pure Rust.** Every service Syntaur owns is Rust — no proxy languages.
+- **Pass-through partnerships.** Third-party services (tax filing, e-file, payments) are routed at cost; Syntaur does not mark them up.
+- **Open by design.** Standards-based (Matter, Thread, BLE, MQTT, IMAP) — no proprietary lock-in.
+- **One identity.** Sign in once, everywhere.
+- **No data sale, no dark patterns.** Memories are written deliberately, not vacuumed up.
+
+## Modules
+
+- **Smart Home** — Multi-protocol device control across Matter, Thread, BLE, MQTT, and vendor APIs. Pure-Rust gateway with no vendor cloud dependencies.
+- **Tax & Finance** — Year-round bookkeeping, document organization, and prepared filings routed through authorized e-file partners at pass-through cost.
+- **Scheduler** — Calendar, todos, and habits across personal and shared calendars, with voice and photo intake.
+- **Voice** — Local speech-to-text and AI assistance via a Bluetooth pendant or phone, designed for hands-free interaction.
+- **Privacy** — Per-device privacy policies, DNS sinkhole, and network segmentation for smart devices that shouldn't phone home.
+- **Engine** — The pure-Rust runtime (vault, scheduler, browser engine, message broker) every Syntaur module is built on.
+
+## Memory
+
+Every Syntaur module is backed by a persistent, structured memory vault. It is human-readable, lives in a format the user can audit and edit directly, and survives across sessions. Memories are organized by topic and tagged for retrieval; relevant history surfaces when it is actually useful, not as a fire hose of old context.
+
+In active development: self-curating memory, per-module character development, cross-module recall, and episode memory.
+
+## Partnerships
+
+Syntaur integrates with service providers across tax, finance, smart home, and scheduling — wherever regulated infrastructure or established expertise means it is better to integrate than rebuild. Partners keep the full per-customer economics and the regulated relationship; Syntaur passes the service through at cost.
+
+Inquiries: partnerships@syntaur.app
+
+## Links
+
+- [Homepage](https://syntaur.app/)
+- [Privacy](https://syntaur.app/privacy.html)
+- [Terms](https://syntaur.app/terms.html)
+- [Source code](https://github.com/syntaur-systems)
+- [Latest release](https://github.com/syntaur-systems/syntaur/releases/latest)
+- [Security policy](https://github.com/syntaur-systems/syntaur/blob/main/SECURITY.md)
+
+## Contact
+
+- General: hello@syntaur.app
+- Partnerships: partnerships@syntaur.app
+- Support: support@syntaur.app
+- Security: security@syntaur.app
+
+## Organization
+
+Syntaur Systems — Olympia, Washington, United States.

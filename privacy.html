@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy — Syntaur</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="theme-color" content="#14554d">
+<style>
+  body {
+    margin: 0; padding: 0;
+    background: #fff;
+    color: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Inter", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 64px 32px 96px; }
+  header a {
+    color: #14554d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  header a:hover { text-decoration: underline; }
+  h1 { font-size: 36px; margin: 32px 0 8px; letter-spacing: -0.5px; }
+  .updated { color: #6b7280; font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 22px; margin-top: 40px; margin-bottom: 12px; color: #14554d; }
+  p, li { color: #1a1a1a; }
+  ul { padding-left: 20px; }
+  ul li { margin-bottom: 6px; }
+  a.inline { color: #14554d; }
+  footer {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 56px;
+    padding-top: 24px;
+    color: #595959;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a href="/">← syntaur.app</a>
+  </header>
+  <h1>Privacy</h1>
+  <div class="updated">Last updated 2026-05-21</div>
+
+  <p>This page is the privacy notice for the Syntaur public marketing site at <a class="inline" href="https://syntaur.app">syntaur.app</a> and the Syntaur Systems GitHub organization. Privacy practices for the Syntaur application itself (which runs on hardware you control) are documented separately in the product's installation materials.</p>
+
+  <h2>What this site collects</h2>
+  <p>The marketing site at <code>syntaur.app</code> is a static page. It does not load analytics scripts, does not profile you, does not set first-party tracking cookies, and does not embed third-party analytics providers.</p>
+  <p>The CDN that serves the page (Cloudflare) records standard HTTP request metadata — your IP address, user-agent, requested URL, and timestamp — for the purpose of operating the network and detecting abuse. Cloudflare's own privacy practices apply to that data. We do not access, store, or otherwise use those request logs ourselves.</p>
+
+  <h2>What we collect when you email us</h2>
+  <p>If you send mail to <code>hello@syntaur.app</code>, <code>partnerships@syntaur.app</code>, <code>support@syntaur.app</code>, <code>security@syntaur.app</code>, or any other <code>@syntaur.app</code> address, that email is routed through Cloudflare Email Routing and forwarded to a mailbox we control. We retain it for as long as we need to act on it. We don't sell, share, or repurpose your message beyond the topic you reached out about.</p>
+
+  <h2>What the Syntaur application collects</h2>
+  <p>The downloadable Syntaur gateway runs on hardware you choose and stores its state on local disk. It does not, by design, send your personal data to Syntaur Systems. Specific integrations (smart-home vendors, tax filing partners, payment processors) connect to those third parties' services with their own privacy practices; each connection is explicit and per-feature, and you can review and revoke them.</p>
+
+  <h2>Third parties we explicitly use</h2>
+  <ul>
+    <li><strong>Cloudflare</strong> — CDN, DNS, and email routing for <code>syntaur.app</code>.</li>
+    <li><strong>Resend</strong> — outbound transactional email (when we email you from <code>partnerships@syntaur.app</code> etc.).</li>
+    <li><strong>GitHub</strong> — code hosting + release distribution.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Questions about this notice or anything you've sent us: <a class="inline" href="mailto:hello@syntaur.app">hello@syntaur.app</a>.</p>
+
+  <footer>
+    <p>This notice will be expanded when the Syntaur application introduces user accounts or any feature that processes personal data on our infrastructure.</p>
+  </footer>
+</div>
+</body>
+</html>

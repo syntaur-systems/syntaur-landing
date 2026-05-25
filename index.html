@@ -43,7 +43,27 @@
           "addressRegion": "WA",
           "addressCountry": "US"
         }
-      }
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "partnerships",
+          "email": "partnerships@syntaur.app",
+          "availableLanguage": ["English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@syntaur.app",
+          "availableLanguage": ["English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@syntaur.app",
+          "availableLanguage": ["English"]
+        }
+      ]
     },
     {
       "@type": "SoftwareApplication",
@@ -55,7 +75,76 @@
       "url": "https://syntaur.app",
       "downloadUrl": "https://github.com/syntaur-systems/syntaur/releases/latest",
       "publisher": { "@id": "https://syntaur.app/#org" },
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "screenshot": {
+        "@type": "ImageObject",
+        "url": "https://syntaur.app/dashboard-preview.webp",
+        "width": 1280,
+        "height": 800,
+        "caption": "Syntaur Smart Home dashboard — scenes, climate ring, room cards, security and energy panels"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://syntaur.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Syntaur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syntaur is a personal AI platform — one binary that consolidates smart home, finances, scheduling, voice, and communications into a single consistent interface. It is local-first and runs on hardware the user controls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Syntaur sell user data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Syntaur does not sell user data, does not lock users into a Syntaur cloud, and does not mark up third-party services it routes to. The home runs on the user's gateway."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What hardware does Syntaur run on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syntaur is a single binary that runs on Linux, macOS, and Windows. It is designed to run on a small always-on gateway in the home, but can run on any general-purpose computer the user owns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Syntaur open source?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Syntaur source code is published at github.com/syntaur-systems. Releases are available at github.com/syntaur-systems/syntaur/releases/latest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What smart home protocols does Syntaur support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syntaur supports Matter, Thread, BLE, MQTT, and a growing set of vendor LAN protocols. It is standards-first rather than proprietary, so existing Matter and Thread devices work without vendor-cloud dependencies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Syntaur work with third-party services like tax filing or payments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syntaur acts as a pass-through to authorized partners — tax e-file providers, payment processors, and other regulated services — at cost. Partners keep the full per-customer economics and the regulated relationship; Syntaur does not mark up the service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Syntaur's memory system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every Syntaur module is backed by a persistent, structured, human-readable memory vault. Memories are organized by topic and tagged for retrieval, survive across sessions, and can be audited or edited directly by the user. Memories are written deliberately rather than vacuumed up."
+          }
+        }
+      ]
     },
     {
       "@type": "WebSite",

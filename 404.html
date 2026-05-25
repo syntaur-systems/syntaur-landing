@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page not found — Syntaur</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #595959;
+    --teal: #14554d;
+    --gold: #8d6800;
+  }
+  body {
+    margin: 0; padding: 0;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Inter", Roboto, sans-serif;
+    text-align: center;
+    padding: 32px;
+    line-height: 1.55;
+  }
+  img.logo { width: 88px; height: 88px; margin-bottom: 24px; }
+  h1 {
+    font-size: 36px;
+    margin: 0 0 12px;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+  .code {
+    color: var(--gold);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  p { color: var(--muted); font-size: 16px; max-width: 480px; margin: 0 0 24px; }
+  a {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(20, 85, 77, 0.25);
+    transition: border-color 0.15s ease;
+  }
+  a:hover { border-bottom-color: var(--teal); }
+  .actions {
+    display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+    margin-top: 8px;
+  }
+  .btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: none;
+  }
+  .btn-primary { background: var(--teal); color: #fff; }
+  .btn-primary:hover { background: #0e3e38; }
+  .btn-secondary { background: #f6f7f9; color: var(--text); border: 1px solid #e5e7eb; }
+  .btn-secondary:hover { background: #eef0f3; }
+</style>
+</head>
+<body>
+  <img class="logo" src="/icon.png" alt="Syntaur">
+  <div class="code">404</div>
+  <h1>That page doesn't exist here.</h1>
+  <p>The URL you followed isn't part of Syntaur. It may have moved, been removed, or just been a typo. The links below should get you where you want to go.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="/">Back to syntaur.app</a>
+    <a class="btn btn-secondary" href="https://github.com/syntaur-systems">View the project on GitHub</a>
+  </div>
+</body>
+</html>
