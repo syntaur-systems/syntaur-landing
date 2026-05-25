@@ -22,7 +22,28 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy . --project-name=syntaur --branch=main --commit-message="Deploy from GitHub Actions"
+      - name: Ping IndexNow
+        run: |
+          KEY=66455c94b9a8e9ba7d082b16ed580a17
+          URLS=$(grep -oE '<loc>[^<]+</loc>' sitemap.xml | sed 's/<\/*loc>//g' | jq -R . | jq -s .)
+          BODY=$(jq -n --arg key "$KEY" --argjson urls "$URLS" '{
+            host: "syntaur.app",
+            key: $key,
+            keyLocation: "https://syntaur.app/\($key).txt",
+            urlList: $urls
+          }')
+          echo "Submitting to IndexNow:"
+          echo "$BODY" | jq .
+          STATUS=$(curl -sS -o /tmp/indexnow-resp.txt -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$BODY")
+          echo "HTTP $STATUS — response: $(cat /tmp/indexnow-resp.txt)"
+          if [ "$STATUS" != "200" ] && [ "$STATUS" != "202" ]; then
+            echo "::warning::IndexNow returned non-success status $STATUS — does not block deploy"
+          fi
       - name: Summary
         run: |
           echo "Deployed: ${{ steps.deploy.outputs.deployment-url }}" >> $GITHUB_STEP_SUMMARY
           echo "Custom domain: https://syntaur.app" >> $GITHUB_STEP_SUMMARY
+          echo "IndexNow: pinged on $(grep -c '<loc>' sitemap.xml) URL(s)" >> $GITHUB_STEP_SUMMARY
