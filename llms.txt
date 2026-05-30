@@ -40,8 +40,8 @@ Inquiries: partnerships@syntaur.app
 - [Privacy](https://syntaur.app/privacy.html)
 - [Terms](https://syntaur.app/terms.html)
 - [Source code](https://github.com/syntaur-systems)
-- [Latest release](https://github.com/syntaur-systems/syntaur/releases/latest)
-- [Security policy](https://github.com/syntaur-systems/syntaur/blob/main/SECURITY.md)
+- [Latest release](https://github.com/syntaur-systems/syntaur-dist/releases/latest)
+- [Security policy](https://github.com/syntaur-systems/syntaur-dist/blob/main/SECURITY.md)
 
 ## Contact
 
