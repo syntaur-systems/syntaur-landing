@@ -711,7 +711,8 @@ HTML = f"""<!doctype html>
       <h2>Engineering</h2>
       <ul>
         <li><a href="https://github.com/syntaur-systems" target="_blank" rel="noopener">github.com/syntaur-systems</a></li>
-        <li><a href="https://github.com/syntaur-systems/syntaur-landing" target="_blank" rel="noopener">This site is open source</a></li>
+        <li><a href="https://github.com/syntaur-systems/syntaur-landing" target="_blank" rel="noopener">Site source on GitHub</a></li>
+        <li>&copy; 2026 Syntaur Systems. All rights reserved.</li>
       </ul>
     </div>
     <div class="col">

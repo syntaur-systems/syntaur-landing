@@ -46,4 +46,7 @@ Cloudflare automatically:
 
 ## License
 
-MIT.
+Proprietary — © 2026 Syntaur Systems, all rights reserved. The repo is
+public so the site can be inspected and deployed transparently, but it
+is not open source; see [LICENSE](LICENSE). (Syntaur itself is also
+proprietary, closed-source software.)
