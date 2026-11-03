@@ -17,9 +17,26 @@ Single-page site deployed to Cloudflare Pages with a custom domain at the apex o
 ├── og-image.png            # 1200×630 social card
 ├── robots.txt              # Crawl rules + sitemap pointer
 ├── sitemap.xml             # Search engine sitemap
+├── _routes.json            # Cloudflare Pages routing rule: invoke functions only for /downloads/*
+├── functions/              # Cloudflare Pages Functions adapter
+│   └── downloads/
+│       └── [version]/
+│           └── [file].js   # Streaming download adapter for Microsoft Store
+├── tests/                  # Node builtin mock fetch tests
+│   └── downloads.test.mjs
 └── src/
     └── template.py         # Generator that emits index.html
 ```
+
+## Direct Downloads Adapter
+
+A direct-download adapter is provided for distribution channels such as the Microsoft Store, which require a direct 200/206 streaming endpoint rather than a 302 redirect to GitHub Releases:
+
+- **Route**: `GET /downloads/v0.7.325/syntaur-server-windows-x86_64.msi` (and `HEAD`)
+- **Authority**: GitHub Releases remains the sole source of truth and authority for release assets (`github.com/syntaur-systems/syntaur-dist/releases/download/v0.7.325/syntaur-server-windows-x86_64.msi`).
+- **Binary Integrity**: The v0.7.325 origin artifact has SHA-256 `e0d1a869676adfd27b12986abe887b818f60deabb2093b2c5f85146511f273ee` (73,015,296 bytes). The adapter streams it without transformation or buffering; the delivered bytes must be checked after deployment. It does not add a signing authority or perform runtime signature verification.
+- **Routing**: `_routes.json` limits function execution to `/downloads/*`; existing static marketing pages do not invoke this function.
+- **Checks**: `node --test tests/downloads.test.mjs` runs the mocked HTTP tests. Deploy through the existing GitHub Actions workflow on `main`, then verify a direct HTTP 200, the full downloaded hash, and a partial download before using the URL in Partner Center.
 
 ## Deploy
 
